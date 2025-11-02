@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 21:30:07 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/02 19:58:52 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/02 20:08:26 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		last_node = ft_lstlast(*lst);
 		last_node->next = new;
 		new->previous = last_node;
-		new->next = NULL;
 	}
 }
