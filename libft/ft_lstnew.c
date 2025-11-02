@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 19:48:13 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/08/06 20:10:34 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:19:30 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;
+	node->previous = NULL;
 	return (node);
 }
