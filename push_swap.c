@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/01 20:34:22 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/02 20:48:41 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 int	main(int ac, char *av[])
 {
-	if (ac != 2)
+	if (ac < 2)
 		return (1);
+	while (*av)
+	{
+		ft_printf("%s\n", *av);
+		av++;
+	}
 	return (0);
 }
