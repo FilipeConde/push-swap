@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 18:30:31 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/10/21 21:07:41 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/01 20:55:13 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_list
 {
 	void			*content;
+	struct s_list	*previous;
 	struct s_list	*next;
 }	t_list;
 
