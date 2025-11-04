@@ -1,12 +1,16 @@
 
 CC = cc
-CFLAGS = -Wextra -Werror -Wall
+CFLAGS = -Wextra -Werror -Wall -I.
+C_FILES = push_swap.c \
+		check_input_params.c
+
+HEADERS = push_swap.h
 TARGETS = push_swap
 
 all: $(TARGETS)
 
-push_swap: push_swap.c libft/libft.a
-	$(CC) $(CFLAGS) -o $@ $^ -Llibft -lft
+push_swap: $(C_FILES) libft/libft.a
+	$(CC) $(CFLAGS) $^ -Llibft -lft -o $@
 
 libft/libft.a:
 	make -C libft/
