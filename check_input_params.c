@@ -6,21 +6,38 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/02 20:16:52 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/02 21:25:48 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_integer()
-{
-	// code
-}
+#include "push_swap.h"
 
-int	check_double()
-{
-	// code
-}
+// static int	check_integer()
+// {
+// 	// code
+// }
 
-int	check_int_limits()
+// static int	check_double()
+// {
+// 	// code
+// }
+
+// static int	check_int_limits()
+// {
+// 	// code
+// }
+
+int	check_input_params(char **str)
 {
-	// code
+	while (*str)
+	{
+		ft_printf("%s\n", *str);
+		str++;
+	}
+	// while (*str)
+	// {
+		
+	// 	str++;
+	// }
+	return (0);
 }
