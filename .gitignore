@@ -1,4 +1,5 @@
 *.o
+*.a
 push_swap
-/vscode
+.vscode
 push_swap
