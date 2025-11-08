@@ -6,7 +6,7 @@
 #    By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/20 19:20:11 by fconde-p          #+#    #+#              #
-#    Updated: 2025/11/02 20:05:50 by fconde-p         ###   ########.fr        #
+#    Updated: 2025/11/08 16:50:51 by fconde-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = ft_isalpha.c \
 	ft_memcmp.c \
 	ft_memchr.c \
 	ft_atoi.c \
+	ft_atol.c \
 	ft_calloc.c \
 	ft_substr.c \
 	ft_strjoin.c \
