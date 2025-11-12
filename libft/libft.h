@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 18:30:31 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/08 16:50:34 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/12 08:08:41 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct s_list
 	struct s_list	*previous;
 	struct s_list	*next;
 }	t_list;
+
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
