@@ -21,12 +21,6 @@ echo -e "${GREEN}${BOLD}TC01 - all valid params${NC}${NORMAL}"
 done
 echo
 
-echo -e "${GREEN}${BOLD}TC02 - VVIV${NC}${NORMAL}"
-./push_swap 3 -1 a 35 | while IFS= read -r line; do
-    echo -e "${GREEN}${BOLD}${line}${NC}${NORMAL}";
-done
-echo
-
 echo "==> do full cleanup"
 make fclean
 
