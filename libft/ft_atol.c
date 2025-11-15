@@ -6,21 +6,21 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 20:02:19 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/08 16:50:55 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/15 12:27:50 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	gen_int(char *ptr, int acc)
-{
-	while (ft_isdigit(*ptr) > 0)
-	{
-		acc = 
-		ptr++;
-	}
-	return (acc);
-}
+// static int	gen_int(char *ptr, int acc)
+// {
+// 	while (ft_isdigit(*ptr) > 0)
+// 	{
+// 		acc = 
+// 		ptr++;
+// 	}
+// 	return (acc);
+// }
 
 static int	check_sign(char *ptr, int *sign)
 {
