@@ -10,16 +10,16 @@ TARGETS = push_swap
 all: $(TARGETS)
 
 push_swap: $(C_FILES) libft/libft.a
-	$(CC) $(CFLAGS) $^ -Llibft -lft -o $@
+	@$(CC) $(CFLAGS) $^ -Llibft -lft -o $@
 
 libft/libft.a:
-	make -C libft/
+	@make -C libft/
 
 clean:
-	make -C libft/ clean
+	@make -C libft/ clean
 
 fclean: clean
-	rm -rf $(TARGETS)
-	make -C libft/ fclean
+	@rm -rf $(TARGETS)
+	@make -C libft/ fclean
 
 re: fclean all
