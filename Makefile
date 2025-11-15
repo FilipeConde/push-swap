@@ -1,6 +1,6 @@
 
 CC = cc
-CFLAGS = -Wextra -Werror -Wall -I.
+CFLAGS = -g3 -Wextra -Werror -Wall -I.
 C_FILES = push_swap.c \
 		check_input_params.c
 
