@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/15 16:12:25 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/19 21:45:58 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	check_integer(const char *str)
 {
-	// check for intmax and intmin limits
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str)
@@ -26,27 +25,51 @@ static int	check_integer(const char *str)
 	return (1);
 }
 
-// static int	check_double()
-// {
-// 	// code
-// }
+static int	check_double(char **str)
+{
+	char	**ptr_i;
+	char	**ptr_j;
 
-// static int	check_int_limits()
-// {
-// 	// code
-// }
+	ptr_i = str;
+	while (*ptr_i)
+	{
+		ptr_j = ptr_i + 1;
+		while (*ptr_j)
+		{
+			if (ft_atol(*ptr_i) == ft_atol(*ptr_j))
+			{
+				ft_printf("Double at %s\n", *ptr_i);
+				return (0);
+			}
+			ptr_j++;
+		}
+		ptr_i++;
+	}
+	return (1);
+}
+
+static int	check_int_limits(const char *str)
+{
+	if (ft_atol(str) > MAX_INT || ft_atol(str) < MIN_INT)
+		return (0);
+	else
+		return (1);
+}
 
 int	check_input_params(char **str)
 {
-	while (*str)
+	char	**ptr_str;
+
+	ptr_str = str;
+	while (*ptr_str)
 	{
-		ft_printf("val: %d\n", check_integer(*str));
-		str++;
+		if (check_integer(*ptr_str) == 0)
+		return (1);
+		if (check_int_limits(*ptr_str) == 0)
+		return (1);
+		ptr_str++;
 	}
-	// while (*str)
-	// {
-		
-	// 	str++;
-	// }
+	if (check_double(str) == 0)
+		return (1);
 	return (0);
 }
