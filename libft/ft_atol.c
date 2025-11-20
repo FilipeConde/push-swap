@@ -6,13 +6,13 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 20:02:19 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/15 16:36:45 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:02:58 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	gen_int(char *ptr, int acc)
+static long	gen_long(char *ptr, long acc)
 {
 	while (ft_isdigit(*ptr) > 0)
 	{
@@ -54,7 +54,7 @@ long	ft_atol(const char *nptr)
 	{
 		if (ft_isdigit(*nptr) > 0)
 		{
-			acc = gen_int((char *)nptr, acc);
+			acc = gen_long((char *)nptr, acc);
 			return (acc * sign);
 		}
 		nptr++;

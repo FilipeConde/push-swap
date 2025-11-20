@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/20 16:29:14 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:04:19 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	check_integer(const char *str)
 {
-	// ft_printf("CHECKPOINT CHECK INTEGER\n");
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str)
@@ -42,7 +41,7 @@ static int	check_double(char **str)
 		{
 			if (ft_atol(*ptr_i) == ft_atol(*ptr_j))
 			{
-				ft_printf("Repeated input. Check the '%s' occurrences.\n", *ptr_i);
+				ft_printf("Repeated input. Check '%s' occurrences.\n", *ptr_i);
 				return (0);
 			}
 			ptr_j++;
