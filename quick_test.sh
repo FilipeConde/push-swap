@@ -16,7 +16,7 @@ make
 echo -e "${GREEN}${BOLD}==> run test cases${NC}${NORMAL}"
 
 echo -e "${GREEN}${BOLD}TC01 - all valid params but one (3 -1 0 12 -666 400) ${NC}${NORMAL}"
-./push_swap 3 -1 0 12 -666 400 | while IFS= read -r line; do
+./push_swap 3 -1 2147483649 12 -666 400 | while IFS= read -r line; do
     echo -e "${GREEN}${BOLD}${line}${NC}${NORMAL}";
 done
 echo
