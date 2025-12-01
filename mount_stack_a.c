@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   mount_stack_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/01 20:02:55 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/01 18:19:26 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/01 20:02:32 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <limits.h>
+t_list	*create_el_stack_a(int nbr)
+{
+	int		*int_ptr;
+	t_list	*node;
 
-// add functions definitions
-int	check_input_params(char **str);
-t_list	*create_el_stack_a(int nbr);
+	int_ptr = (int *)ft_calloc(1, sizeof(int));
+	if (!int_ptr)
+		return (NULL);
+	*int_ptr = nbr;
+	node = ft_lstnew(int_ptr);
+	if (!node)
+	{
+		free(int_ptr);
+		return (NULL);
+	}
+	return (node);
+}
 
-#endif
