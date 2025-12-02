@@ -2,7 +2,8 @@
 CC = cc
 CFLAGS = -g3 -Wextra -Werror -Wall -I.
 C_FILES = push_swap.c \
-		check_input_params.c
+		check_input_params.c \
+		create_el_stack_a.c
 
 HEADERS = push_swap.h
 TARGETS = push_swap
