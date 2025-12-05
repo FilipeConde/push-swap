@@ -4,7 +4,9 @@ CFLAGS = -g3 -Wextra -Werror -Wall -I.
 C_FILES = push_swap.c \
 		check_input_params.c \
 		create_el_stack_a.c \
-		init_stack.c
+		init_stack.c \
+		print_stack.c
+
 
 HEADERS = push_swap.h
 TARGETS = push_swap

@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/04 20:59:04 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/05 19:56:00 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int ac, char *av[])
 {
 	t_list	**stack_a;
 	t_list	*node;
-	t_list	*temp;
 	int		i;
 
 	i = 0;
@@ -32,11 +31,6 @@ int	main(int ac, char *av[])
 		ft_lstclear(stack_a, free);
 		return (1);
 	}
-	temp = *stack_a;
-	while (temp)
-	{
-		ft_printf("node val: %d\n", *((int*)temp->content));
-		temp = temp->next;
-	}
+	print_stack(*stack_a);
 	return (0);
 }
