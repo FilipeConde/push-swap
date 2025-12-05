@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/04 21:00:56 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/04 20:45:53 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/04 21:01:40 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <limits.h>
+int	init_stack(t_list **stack_a, char **av)
+{
+	t_list	*node;
+	int		i;
 
-// add functions definitions
-int	check_input_params(char **str);
-t_list	*create_el_stack_a(int nbr);
-int	init_stack(t_list **stack_a, char **av);
-
-#endif
+	i = 0;
+	node = NULL;
+	while (av[i])
+	{
+		node = create_el_stack_a(ft_atoi(av[i]));
+		ft_lstadd_back(stack_a, node);
+		i++;
+	}
+	i = 0;
+	return (0);
+}

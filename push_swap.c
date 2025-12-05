@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/04 20:22:47 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:59:04 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	main(int ac, char *av[])
 
 	i = 0;
 	stack_a = ft_calloc(1, sizeof(t_list *));
+	if (!stack_a)
+		return (1);
 	node = NULL;
 	if (ac < 2)
-	return (1);
-	// ft_printf("Val: %d\n", check_input_params(++av));  // starts out by the second param cuz first is program name
+		return (1);
 	check_input_params(++av);
-	while (av[i])
+	if (init_stack(stack_a, av) == 1)
 	{
-		node = create_el_stack_a(ft_atoi(av[i]));
-		ft_lstadd_back(stack_a, node);
-		i++;
+		ft_lstclear(stack_a, free);
+		return (1);
 	}
 	temp = *stack_a;
 	while (temp)
