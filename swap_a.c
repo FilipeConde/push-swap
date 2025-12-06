@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:09:41 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/06 12:46:10 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/06 13:16:17 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <limits.h>
+void	swap_a(t_list **a)
+{
+	// 1 2 3
+	// 2 1 3
+	t_list	*first;
+	t_list	*second;
+	t_list	*third;
 
-// add functions definitions
-int	check_input_params(char **str);
-t_list	*create_el_stack_a(int nbr);
-int	init_stack(t_list **stack_a, char **av);
-void	print_stack(t_list *stack_a);
-void	swap_a(t_list **a);
-
-#endif
+	if (!a || !(*a) || !(*a)->next)
+		return ;
+	first = *a;
+	second = (*a)->next;
+	third = second->next;
+	*a = second;
+	second->next = first;
+	first->previous = second;
+	first->next = third;
+	if (third)
+		third->previous = first;
+	second->previous = NULL;
+	ft_printf("sa\n");
+}
