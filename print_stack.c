@@ -6,17 +6,33 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 19:50:44 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/05 19:54:31 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/06 13:52:18 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack(t_list *stack_a)
+void	print_stack(t_list *a, t_list *b)
 {
-	while (stack_a)
+	while (a || b)
 	{
-		ft_printf("node val: %d\n", *((int*)stack_a->content));
-		stack_a = stack_a->next;
+		if (a && b)
+		{
+			ft_printf("%d      %d\n", *((int*)a->content), *((int*)b->content));
+			a = a->next;
+			b = b->next;
+		}
+		else if (a && !b)
+		{
+			ft_printf("%d\n", *((int*)a->content));
+			a = a->next;
+		}
+		else if (!a && b)
+		{
+			ft_printf("        %d\n", *((int*)b->content));	
+			b = b->next;
+		}
 	}
+	ft_printf("________\n");
+	ft_printf("a______b\n\n");
 }

@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:22:11 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/06 13:41:12 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int	main(int ac, char *av[])
 {
 	t_list	**a;
+	t_list	**b;
 	t_list	*node;
 	int		i;
 
 	i = 0;
 	a = ft_calloc(1, sizeof(t_list *));
+	b = ft_calloc(1, sizeof(t_list *));
 	if (!a)
 		return (1);
 	node = NULL;
@@ -32,10 +34,12 @@ int	main(int ac, char *av[])
 		free(a);
 		return (1);
 	}
-	print_stack(*a);
+	print_stack(*a, *b);
 	swap_a(a);
-	print_stack(*a);
+	print_stack(*a, *b);
 	ft_lstclear(a, free);
+	ft_lstclear(b, free);
 	free(a);
+	free(b);
 return (0);
 }
