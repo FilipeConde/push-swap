@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap_ab.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:27:10 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/06 13:20:15 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/06 13:27:33 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <limits.h>
-
-// add functions definitions
-int	check_input_params(char **str);
-t_list	*create_el_stack_a(int nbr);
-int	init_stack(t_list **stack_a, char **av);
-void	print_stack(t_list *stack_a);
-void	swap_a(t_list **a);
-void	swap_b(t_list **b);
-void	swap_swap(t_list **a, t_list **b);
-
-#endif
+void	swap_swap(t_list **a, t_list **b)
+{
+	swap_a(a);
+	swap_b(b);
+	ft_printf("ss\n");
+}
