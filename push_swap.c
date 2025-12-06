@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/05 19:56:00 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/05 22:27:22 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ int	main(int ac, char *av[])
 	if (init_stack(stack_a, av) == 1)
 	{
 		ft_lstclear(stack_a, free);
+		free(stack_a);
 		return (1);
 	}
 	print_stack(*stack_a);
-	return (0);
+	ft_lstclear(stack_a, free);
+	free(stack_a);
+return (0);
 }
