@@ -6,7 +6,8 @@ C_FILES = push_swap.c \
 		create_el_stack_a.c \
 		init_stack.c \
 		print_stack.c \
-		swap_a.c
+		swap_a.c \
+		swap_b.c
 
 
 HEADERS = push_swap.h

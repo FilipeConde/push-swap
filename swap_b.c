@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   swap_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:22:11 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/06 13:20:15 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/06 13:20:44 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char *av[])
+void	swap_b(t_list **b)
 {
-	t_list	**a;
-	t_list	*node;
-	int		i;
+	// 1 2 3
+	// 2 1 3
+	t_list	*first;
+	t_list	*second;
+	t_list	*third;
 
-	i = 0;
-	a = ft_calloc(1, sizeof(t_list *));
-	if (!a)
-		return (1);
-	node = NULL;
-	if (ac < 2)
-		return (1);
-	check_input_params(++av);
-	if (init_stack(a, av) == 1)
-	{
-		ft_lstclear(a, free);
-		free(a);
-		return (1);
-	}
-	print_stack(*a);
-	swap_a(a);
-	print_stack(*a);
-	ft_lstclear(a, free);
-	free(a);
-return (0);
+	if (!b || !(*b) || !(*b)->next)
+		return ;
+	first = *b;
+	second = (*b)->next;
+	third = second->next;
+	*b = second;
+	second->next = first;
+	first->previous = second;
+	first->next = third;
+	if (third)
+		third->previous = first;
+	second->previous = NULL;
+	ft_printf("sb\n");
 }
