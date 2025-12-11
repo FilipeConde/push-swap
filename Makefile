@@ -8,7 +8,8 @@ C_FILES = push_swap.c \
 		print_stack.c \
 		swap_a.c \
 		swap_b.c \
-		swap_swap.c
+		swap_swap.c \
+		push_b.c
 
 
 HEADERS = push_swap.h

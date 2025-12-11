@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:41:12 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:14:14 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char *av[])
 		return (1);
 	}
 	print_stack(*a, *b);
-	swap_a(a);
+	push_b(a, b);
 	print_stack(*a, *b);
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
