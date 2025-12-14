@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 15:35:09 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/14 20:25:53 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,21 @@ int	main(int ac, char *av[])
 	if (ac < 2)
 		return (1);
 	check_input_params(++av);
-	if (init_stack(a, av) == 1)
+	if (init_stack(b, av) == 1)
 	{
-		ft_lstclear(a, free);
-		free(a);
+		ft_lstclear(b, free);
+		free(b);
 		return (1);
 	}
 	print_stack(*a, *b);
-	push_b(a, b);
-	push_b(a, b);
-	push_b(a, b);
+	parse_list(a, b);
 	print_stack(*a, *b);
-	reverse_rotate_rotate(a, b);
-	print_stack(*a, *b);
+	// push_b(a, b);
+	// push_b(a, b);
+	// push_b(a, b);
+	// print_stack(*a, *b);
+	// reverse_rotate_rotate(a, b);
+	// print_stack(*a, *b);
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
 	free(a);

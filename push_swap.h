@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 15:34:27 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/14 20:03:13 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ void	rotate_rotate(t_list **a, t_list **b);
 void	reverse_rotate_a(t_list **a);
 void	reverse_rotate_b(t_list **b);
 void	reverse_rotate_rotate(t_list **a, t_list **b);
+void	parse_list(t_list **a, t_list **b);
 
 #endif
