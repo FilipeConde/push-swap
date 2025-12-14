@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 14:25:30 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/14 15:04:11 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ int	main(int ac, char *av[])
 		return (1);
 	}
 	print_stack(*a, *b);
-	push_b(a, b);
-	push_b(a, b);
-	push_b(a, b);
-	print_stack(*a, *b);
-	rotate_rotate(a, b);
+	// push_b(a, b);
+	// push_b(a, b);
+	// push_b(a, b);
+	// print_stack(*a, *b);
+	// rotate_rotate(a, b);
+	reverse_rotate_a(a);
 	print_stack(*a, *b);
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
