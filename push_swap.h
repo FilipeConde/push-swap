@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/13 22:58:30 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/14 10:07:27 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	swap_b(t_list **b);
 void	swap_swap(t_list **a, t_list **b);
 void	push_a(t_list **a, t_list **b);
 void	push_b(t_list **a, t_list **b);
+void	rotate_a(t_list **a);
 
 #endif
