@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_a.c                                 :+:      :+:    :+:   */
+/*   reverse_rotate_b.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/14 14:34:58 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 15:30:54 by fconde-p         ###   ########.fr       */
+/*   Created: 2025/12/14 15:25:27 by fconde-p          #+#    #+#             */
+/*   Updated: 2025/12/14 15:30:41 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_a(t_list **a)
+void	reverse_rotate_b(t_list **b)
 {
 	t_list	*node;
 
-	node = ft_lstlast(*a);
+	node = ft_lstlast(*b);
 	node->previous->next = NULL;
-	node->next = *a;
-	(*a)->previous = node;
-	*a = node;
-	ft_printf("rra\n");
+	node->next = *b;
+	(*b)->previous = node;
+	*b = node;
+	ft_printf("rrb\n");
 }

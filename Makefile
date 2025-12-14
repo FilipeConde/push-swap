@@ -14,7 +14,8 @@ C_FILES = push_swap.c \
 		rotate_a.c \
 		rotate_b.c \
 		rotate_rotate.c \
-		reverse_rotate_a.c
+		reverse_rotate_a.c \
+		reverse_rotate_b.c
 
 
 HEADERS = push_swap.h
