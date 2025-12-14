@@ -9,6 +9,7 @@ C_FILES = push_swap.c \
 		swap_a.c \
 		swap_b.c \
 		swap_swap.c \
+		push_a.c \
 		push_b.c
 
 
