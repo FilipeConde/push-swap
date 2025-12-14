@@ -6,7 +6,7 @@
 #    By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/20 19:20:11 by fconde-p          #+#    #+#              #
-#    Updated: 2025/11/15 15:04:52 by fconde-p         ###   ########.fr        #
+#    Updated: 2025/12/14 10:18:29 by fconde-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ SRCS = ft_isalpha.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstadd_back.c \
-	ft_lstadd_front.c
+	ft_lstadd_front.c \
+	ft_lstfirst.c
 
 BONUS_SRC = ft_lstsize_bonus.c \
 	ft_lstlast_bonus.c \
