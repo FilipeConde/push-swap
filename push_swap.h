@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/15 22:09:31 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/21 16:14:45 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ void	reverse_rotate_b(t_list **b);
 void	reverse_rotate_rotate(t_list **a, t_list **b);
 void	parse_list(t_list **a, t_list **b);
 void	radix_sort(t_list **a, t_list **b);
+int	get_bit_rank(t_list **a);
 
 #endif
