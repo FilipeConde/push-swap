@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:51:28 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/15 22:09:23 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/21 15:43:04 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	radix_sort(t_list **a, t_list **b)
 {
+	a = NULL;
+	b = NULL;
 	//code here
 }
