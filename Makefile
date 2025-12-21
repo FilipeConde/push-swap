@@ -19,8 +19,8 @@ C_FILES = push_swap.c \
 		reverse_rotate_rotate.c \
 		parse_list.c \
 		radix_sort.c \
-		get_bit_rank.c
-
+		get_bit_rank.c \
+		check_if_sorted.c
 
 HEADERS = push_swap.h
 TARGETS = push_swap

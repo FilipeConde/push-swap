@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/21 16:20:14 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:03:25 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char *av[])
 	print_stack(*a, *b);
 	// push_b(a, b);
 	// print_stack(*a, *b);
-	ft_printf("BIT RANK: %d\n", get_bit_rank(a));
+	ft_printf("IS SORTED? %d\n", check_if_sorted(a));
 	ft_lstclear(a, free);
 	free(a);
 	free(b);
