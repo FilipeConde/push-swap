@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 15:44:55 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/21 19:47:52 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:51:41 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int	get_bit_rank(t_list **a)
 		return (0);
 	rank = 0;
 	curr_node = *a;
-	nbr = *((int*)curr_node->content);
+	nbr = *((int *)curr_node->content);
 	while (curr_node)
 	{
-		if (*((int*)curr_node->content) > nbr)
+		if (*((int *)curr_node->content) > nbr)
 			nbr = *((int *)curr_node->content);
 		curr_node = curr_node->next;
 	}
 	while ((nbr >> rank) != 0)
 		rank++;
-	return (rank);	
+	return (rank);
 }

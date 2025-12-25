@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 20:00:30 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/13 22:40:07 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:45:12 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	push_b(t_list **a, t_list **b)
 {
-	//apontar o nó A para B e B para A
 	t_list	*node;
 
 	if (!a || !*a)

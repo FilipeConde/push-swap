@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 21:30:07 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/02 20:08:26 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:41:18 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last_node;
+	t_list	*last_node;
 
 	if (!new)
 		return ;

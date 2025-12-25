@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:52:21 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 10:21:24 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:54:09 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	rotate_a(t_list **a)
 	node->previous = *a;
 	*a = ft_lstfirst(*a);
 	ft_printf("ra\n");
-
 }

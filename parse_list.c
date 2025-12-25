@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 19:59:22 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/14 21:03:47 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:50:41 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	parse_list(t_list **a, t_list **b)
 		comp_node = *b;
 		while (comp_node)
 		{
-			if (*((int*)comp_node->content) < *((int*)curr_node->content))
+			if (*((int *)comp_node->content) < *((int *)curr_node->content))
 			{
 				rank++;
 			}

@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 12:46:10 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/06 13:16:17 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:52:14 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	swap_a(t_list **a)
 {
-	// 1 2 3
-	// 2 1 3
 	t_list	*first;
 	t_list	*second;
 	t_list	*third;

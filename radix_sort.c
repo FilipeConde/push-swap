@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 20:51:28 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/25 19:10:48 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 20:08:54 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	radix_sort(t_list **a, t_list **b)
 	{
 		while (*a && i < lst_size)
 		{
-			if (((*(int*)((*a)->content) >> bit) & 1) == 0)
+			if (((*(int *)((*a)->content) >> bit) & 1) == 0)
 				push_b(a, b);
-			else if (((*((int*)(*a)->content) >> bit) & 1) == 1)
+			else if (((*((int *)(*a)->content) >> bit) & 1) == 1)
 				rotate_a(a);
 			i++;
 		}

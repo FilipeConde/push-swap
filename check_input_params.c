@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/11/20 17:04:19 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/25 19:53:33 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	check_double(char **str)
 {
 	char	**ptr_i;
 	char	**ptr_j;
-	
+
 	ptr_i = str;
 	while (*ptr_i)
 	{
@@ -64,7 +64,7 @@ static int	check_int_limits(const char *str)
 int	check_input_params(char **str)
 {
 	char	**ptr_str;
-	
+
 	ptr_str = str;
 	while (*ptr_str)
 	{
