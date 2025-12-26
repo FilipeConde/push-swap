@@ -25,7 +25,7 @@ To clean the objects created, do a `make clean`.
 To clean the objects created and the executable, do a `make fclean`.
 To run the binary, please, provide a list of integer numbers.
 
-Note that 42 asks us to use bash. So, if you are trying to do something like pass the arguments list by a shell variable such as `ARGS="1 5 -43 0 -8934` and do a `./push_swap $ARGS` the zsh interpreter will understand the ARGS content as a string while bash, the default interpreter for shell here, will take the list as a bunch of independent variables.
+Note that 42 asks us to use bash. So, if you are trying to do something like pass the arguments list by a shell variable such as `ARGS="1 5 -43 0 -8934"` and do a `./push_swap $ARGS` the zsh interpreter will understand the ARGS content as a string while bash, the default interpreter for shell here, will take the list as a bunch of independent variables.
 
 # Resources
 
