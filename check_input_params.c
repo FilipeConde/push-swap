@@ -6,24 +6,49 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/27 10:49:14 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/27 17:13:24 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static int	check_digits_qty(const char *str)
+{
+	size_t	len;
+	int		has_sign;
+
+	len = ft_strlen(str);
+	has_sign = (str[0] == '-' || str[0] == '+');
+	if (has_sign && len == 1)
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
+	if (len > 11)
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
+	if (len == 11 && !has_sign)
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
+	return (1);
+}
+
 static int	check_integer(const char *str)
 {
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str)
+	int i;
+
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
-		if (ft_isdigit(*str) == 0)
-		{
-			ft_printf("Error\n");
+		if (ft_isdigit(str[i]) == 0)
 			return (0);
-		}
-		str++;
+		i++;
 	}
 	return (1);
 }
@@ -51,30 +76,24 @@ static int	check_double(char **str)
 	return (1);
 }
 
-static int	check_int_limits(const char *str)
-{
-	if (ft_atol(str) > MAX_INT || ft_atol(str) < MIN_INT)
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
-	return (1);
-}
-
 int	check_input_params(char **str)
 {
-	char	**ptr_str;
+	int		i;
+	long	val;
 
-	ptr_str = str;
-	while (*ptr_str)
+	i = 0;
+	while (str[i])
 	{
-		if (check_integer(*ptr_str) == 0)
+		if (!check_integer(str[i]))
 			return (1);
-		if (check_int_limits(*ptr_str) == 0)
+		if (!check_digits_qty(str[i]))
 			return (1);
-		ptr_str++;
+		val = ft_atol(str[i]);
+		if (val > 2147483647 || val < -2147483648)
+			return (1);
+		i++;
 	}
-	if (check_double(str) == 0)
+	if (!check_double(str))
 		return (1);
 	return (0);
 }
