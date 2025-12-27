@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/25 19:53:33 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:49:14 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	check_integer(const char *str)
 	{
 		if (ft_isdigit(*str) == 0)
 		{
-			ft_printf("Content has non numeric value. Please, check inputs.\n");
+			ft_printf("Error\n");
 			return (0);
 		}
 		str++;
@@ -41,7 +41,7 @@ static int	check_double(char **str)
 		{
 			if (ft_atol(*ptr_i) == ft_atol(*ptr_j))
 			{
-				ft_printf("Repeated input. Check '%s' occurrences.\n", *ptr_i);
+				ft_printf("Error\n");
 				return (0);
 			}
 			ptr_j++;
@@ -55,7 +55,7 @@ static int	check_int_limits(const char *str)
 {
 	if (ft_atol(str) > MAX_INT || ft_atol(str) < MIN_INT)
 	{
-		ft_printf("Content exceeds limits of INT. Please, check inputs.\n");
+		ft_printf("Error\n");
 		return (0);
 	}
 	return (1);
