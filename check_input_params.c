@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/27 17:13:24 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/27 18:00:57 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ static int	check_integer(const char *str)
 	while (str[i])
 	{
 		if (ft_isdigit(str[i]) == 0)
+		{
+			ft_printf("Error\n");
 			return (0);
+		}
 		i++;
 	}
 	return (1);
@@ -90,7 +93,10 @@ int	check_input_params(char **str)
 			return (1);
 		val = ft_atol(str[i]);
 		if (val > 2147483647 || val < -2147483648)
+		{
+			ft_printf("Error\n");
 			return (1);
+		}
 		i++;
 	}
 	if (!check_double(str))
