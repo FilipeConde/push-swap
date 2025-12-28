@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:25:53 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/25 19:40:45 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/28 10:33:17 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ void	radix_sort(t_list **a, t_list **b);
 int		get_bit_rank(t_list **a);
 int		check_if_sorted(t_list **a);
 void	full_clear(t_list **a, t_list **b);
+void	sort_short_list(t_list **a, t_list **b);
 
 #endif

@@ -21,7 +21,8 @@ C_FILES = push_swap.c \
 		radix_sort.c \
 		get_bit_rank.c \
 		check_if_sorted.c \
-		full_clear.c
+		full_clear.c \
+		sort_short_list.c
 
 HEADERS = push_swap.h
 TARGETS = push_swap
