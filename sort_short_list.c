@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 10:25:59 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/28 12:35:14 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/28 12:48:00 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,26 @@ static void	four_el(t_list **a, t_list **b)
 	rotate_a(a);
 }
 
+static void	five_el(t_list **a, t_list **b)
+{
+	isolate_rank(a, b, 3);
+	isolate_rank(a, b, 4);
+	three_el(a);
+	if (*(int *)(*b)->content == 4)
+	{
+		push_a(a, b);
+		push_a(a, b);
+	}
+	else
+	{
+		rotate_b(b);
+		push_a(a, b);
+		push_a(a, b);
+	}
+	rotate_a(a);
+	rotate_a(a);
+}
+
 void	sort_short_list(t_list **a, t_list **b)
 {
 	int	size;
@@ -82,6 +102,8 @@ void	sort_short_list(t_list **a, t_list **b)
 		three_el(a);
 	if (size == 4)
 		four_el(a, b);
+	if (size == 5)
+		five_el(a, b);
 	if (check_if_sorted(a) == 0)
 	{
 		full_clear(a, b);
