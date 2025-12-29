@@ -20,12 +20,15 @@ This project intends to put to practice a few algorithmic concepts in order to c
 
 # Instructions
 
-To compile, use the `make` comand.
-To clean the objects created, do a `make clean`.
-To clean the objects created and the executable, do a `make fclean`.
-To run the binary, please, provide a list of integer numbers.
+To compile, use the `make` comand.\
+To clean the objects created, do a `make clean`.\
+To clean the objects created and the executable, do a `make fclean`.\
+To run the binary, please, provide a list of integer numbers.\
+- Each parameter should be an integer. Other inputs will be treated as error.
+- A string containing a list of values is a input with a bunch of integers, so will be treated as error.
+- In order to prevent safety breaches, broken inputs such as `++++++++5`, `--------5` or `0000000000000000000000000000000005` will not be sanitized by the system. The system expects an INT input on each parameter and anything else will be treates as an error and the program will gracefully stop.
 
-Note that 42 asks us to use bash. So, if you are trying to do something like pass the arguments list by a shell variable such as `ARGS="1 5 -43 0 -8934"` and do a `./push_swap $ARGS` the zsh interpreter will understand the ARGS content as a string while bash, the default interpreter for shell here, will take the list as a bunch of independent variables.
+_Note that 42 asks us to use bash. So, if you are trying to do something like pass the arguments list by a shell variable such as `ARGS="1 5 -43 0 -8934"` and do a `./push_swap $ARGS` the zsh interpreter will understand the ARGS content as a string while bash, the default interpreter for shell here, will take the list as a bunch of independent variables._
 
 # Resources
 
