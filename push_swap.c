@@ -6,11 +6,27 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:31:34 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/28 10:33:21 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/29 11:32:19 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	set_up(t_list **a, t_list **b, char **av)
+{
+	if (init_stack(b, av) == 1)
+	{
+		ft_lstclear(b, free);
+		free(b);
+		exit(1);
+	}
+	parse_list(a, b);
+	if (check_if_sorted(a) == 0)
+	{
+		full_clear(a, b);
+		exit(0);
+	}
+}
 
 int	main(int ac, char *av[])
 {
@@ -29,19 +45,7 @@ int	main(int ac, char *av[])
 	if (!a)
 		return (1);
 	node = NULL;
-	if (init_stack(b, av) == 1)
-	{
-		ft_lstclear(b, free);
-		free(b);
-		return (1);
-	}
-	print_stack(*a, *b);  // remove
-	parse_list(a, b);
-	if (check_if_sorted(a) == 0)
-	{
-		full_clear(a, b);
-		return (0);
-	}
+	set_up(a, b, av);
 	sort_short_list(a, b);
 	ft_lstclear(b, free);
 	radix_sort(a, b);

@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 20:15:40 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/12/27 18:00:57 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/12/29 11:19:17 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	check_digits_qty(const char *str)
 
 static int	check_integer(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
